@@ -132,7 +132,7 @@ class opts:
             opt.dir_dets = '/content/drive/MyDrive/Labs/StrongSORT/{}_{}_YOLOX+BoT'.format(opt.dataset, opt.mode)
         else:
             opt.max_cosine_distance = 0.3
-            opt.dir_dets = '/content/drive/MyDrive/Labs/StrongSORT/StrongSORT/{}_{}_YOLOX+simpleCNN'.format(opt.dataset, opt.mode)
+            opt.dir_dets = '/content/drive/MyDrive/Labs/StrongSORT/{}_{}_YOLOX+simpleCNN'.format(opt.dataset, opt.mode)
         if opt.MC:
             opt.max_cosine_distance += 0.05
         if opt.EMA:

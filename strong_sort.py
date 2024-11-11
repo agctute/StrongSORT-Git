@@ -16,7 +16,7 @@ from GSI import GSInterpolation
 if __name__ == '__main__':
     if opt.AFLink:
         model = PostLinker()
-        model.load_state_dict(torch.load(opt.path_AFLink, map_location=torch.device('cpu')))
+        model.load_state_dict(torch.load(opt.path_AFLink))
         dataset = LinkData('', '')
     for i, seq in enumerate(opt.sequences, start=1):
         print('processing the {}th video {}...'.format(i, seq))

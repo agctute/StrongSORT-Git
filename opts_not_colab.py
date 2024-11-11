@@ -96,17 +96,17 @@ class opts:
         self.parser.add_argument(
             '--root_dataset',
             type=str,
-            default='/content/drive/MyDrive/Labs'
+            default='/Users/yangj/Projects/school/cv/'
         )
         self.parser.add_argument(
             '--path_AFLink',
             type=str,
-            default='/content/drive/MyDrive/Labs/StrongSORT/AFLink_epoch20.pth'
+            default='/Users/yangj/Projects/school/cv/AFLink_epoch20.pth'
         )
         self.parser.add_argument(
             '--dir_save',
             type=str,
-            default='/content/drive/MyDrive/Labs/tmp'
+            default='/Users/yangj/Projects/school/cv/tmp'
         )
         self.parser.add_argument(
             '--EMA_alpha',
@@ -129,10 +129,10 @@ class opts:
         opt.min_detection_height = 0
         if opt.BoT:
             opt.max_cosine_distance = 0.4
-            opt.dir_dets = '/content/drive/MyDrive/Labs/StrongSORT/{}_{}_YOLOX+BoT'.format(opt.dataset, opt.mode)
+            opt.dir_dets = '/Users/yangj/Projects/school/cv/StrongSORT_features/{}_{}_YOLOX+BoT'.format(opt.dataset, opt.mode)
         else:
             opt.max_cosine_distance = 0.3
-            opt.dir_dets = '/content/drive/MyDrive/Labs/StrongSORT/StrongSORT/{}_{}_YOLOX+simpleCNN'.format(opt.dataset, opt.mode)
+            opt.dir_dets = '/Users/yangj/Projects/school/cv/StrongSORT_features/{}_{}_YOLOX+simpleCNN'.format(opt.dataset, opt.mode)
         if opt.MC:
             opt.max_cosine_distance += 0.05
         if opt.EMA:
@@ -140,7 +140,7 @@ class opts:
         else:
             opt.nn_budget = 100
         if opt.ECC:
-            path_ECC = '/content/drive/MyDrive/Labs/StrongSORT/{}_ECC_{}.json'.format(opt.dataset, opt.mode)
+            path_ECC = '/Users/yangj/Projects/school/cv/StrongSORT_features/{}_ECC_{}.json'.format(opt.dataset, opt.mode)
             opt.ecc = json.load(open(path_ECC))
         opt.sequences = data[opt.dataset][opt.mode]
         opt.dir_dataset = join(
